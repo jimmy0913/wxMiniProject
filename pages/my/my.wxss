@@ -1,0 +1,108 @@
+
+/*  作者信息  */
+.author-info{
+    position:relative;
+    height: 340rpx;
+    background-image: url(http://fb.mylove920.com/iconfont/banner2.png);
+    font-size:28rpx;
+}
+.author-info text{
+    color:#fff;
+}
+.author-detail{
+    padding: 60rpx 0 20rpx;
+    text-align:center;
+}
+.author-detail image{
+    display:block;
+    width: 100rpx;
+    height:100rpx;
+    margin:0 auto 10rpx;
+}
+
+.effects{
+    overflow:hidden;
+}
+    .effects-item{
+        box-sizing: border-box;
+        width:25%;
+        float:left;
+        border-right:1rpx solid #666;
+        text-align:center;
+    }
+    .effects-item:last-child{
+        border:0;
+    }
+    .effects-item .number{
+        display:block;
+        font-weight:bold;
+        font-size:30rpx;
+        color:#fff;
+    }
+    .effects-item text{
+        color:#666;
+    }
+
+/* 我的... 列表 */
+.my-list{
+    padding:0 34rpx;
+}
+.my-item{
+    position:relative;
+    height:100rpx;
+    line-height:100rpx;
+    border-bottom:1px solid #ddd;
+}
+.my-item .new{
+    position:absolute;
+    right:42rpx;
+    top:30rpx;
+    width:40rpx;
+    height:40rpx;
+    line-height:40rpx;
+    border-radius:50%;
+    text-align:center;
+    background-color:#f00;
+}
+.my-item .new text{
+    color:#fff;
+    font-size:16rpx;
+}
+.my-item .arrow{
+    position:absolute;
+    right:0;
+    top:32rpx;
+    width:24rpx;
+    height:40rpx;
+    font-size:0;
+    background-image: url(http://fb.mylove920.com/iconfont/icon_arrow_r.png);
+    background-size:cover;
+}
+.my-item text{
+    font-size:38repx;
+    color:#333;
+}
+.my-item .icon{
+    position:relative;
+    display:inline-block;
+    width:48rpx;
+    height:48rpx;
+    top:16rpx;
+    margin-right:20rpx;
+    background-size:cover;
+}
+.icon-create{
+    background-image: url(http://fb.mylove920.com/iconfont/icon_image.png);
+}
+.icon-follow{
+    background-image: url(http://fb.mylove920.com/iconfont/icon_m_follow.png);
+}
+.icon-collect{
+    background-image: url(http://fb.mylove920.com/iconfont/icon_star2.png);
+}
+.icon-comment{
+    background-image: url(http://fb.mylove920.com/iconfont/icon_m_msg.png);
+}
+.icon-like{
+    background-image: url(http://fb.mylove920.com/iconfont/icon_thumb2.png);
+}

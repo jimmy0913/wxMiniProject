@@ -1,0 +1,64 @@
+ <import src="../../components/fixed-bar/fixed-bar.wxml" />
+
+<view class="fixed-page">
+    <view class="fixed-cont-body">
+        <!-- 作者信息  -->
+        <view class="author-info">
+            <view class="author-detail">
+              <image src="http://fb.mylove920.com/iconfont/icon_m_star.png"></image>
+              <text>某某某</text>
+            </view>
+            <view class="effects">
+                <view class="effects-item">
+                    <text class="number">30</text>
+                    <text>点赞量</text>
+                </view>
+                <view class="effects-item">
+                    <text class="number">30</text>
+                    <text>转发量</text>
+                </view>
+                <view class="effects-item">
+                    <text class="number">30</text>
+                    <text>评论量</text>
+                </view>
+                <view class="effects-item">
+                    <text class="number">30</text>
+                    <text>关注量</text>
+                </view>
+            </view>
+        </view>
+
+        <!-- 我的列表 -->
+        <view class="my-list">
+            <view class="my-item">
+                <view class="icon icon-create"></view>
+                <text>我的创作</text>
+                <view class="arrow"></view>
+            </view>
+            <view class="my-item">
+                <view class="icon icon-follow"></view>
+                <text>我的关注</text>
+                <view class="new">
+                    <text>1</text>
+                </view>
+                <view class="arrow"></view>
+            </view>
+            <view class="my-item">
+                <view class="icon icon-collect"></view>
+                <text>我的收藏</text>
+                <view class="arrow"></view>
+            </view>
+            <view class="my-item">
+                <view class="icon icon-comment"></view>
+                <text>我的评论</text>
+                <view class="arrow"></view>
+            </view>
+            <view class="my-item">
+                <view class="icon icon-like"></view>
+                <text>我的点赞</text>
+                <view class="arrow"></view>
+            </view>
+        </view>
+    </view>
+    <template is="fixed-bar" data="{{page:'my'}}" />
+</view>
