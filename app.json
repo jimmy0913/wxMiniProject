@@ -3,13 +3,14 @@
     
     "pages/index/index",
     "pages/my/my",
+    "pages/my-created/my-created",
     "pages/logs/logs"
 
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "图片社交",
     "navigationBarTextStyle":"black"
   }
 }

@@ -18,6 +18,7 @@
     width: 100rpx;
     height:100rpx;
     margin:0 auto 10rpx;
+    border-radius:50%;
 }
 
 .effects{

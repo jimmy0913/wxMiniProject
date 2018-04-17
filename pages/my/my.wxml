@@ -7,7 +7,7 @@
             <view class="author-detail">
               <!--<image src="http://fb.mylove920.com/iconfont/icon_m_star.png"></image>-->
               <image src="{{authorInfo.avatarUrl}}"></image>
-              <text>某某某</text>
+              <text>{{authorInfo.nickName}}</text>
             </view>
             <view class="effects">
                 <view class="effects-item">
@@ -31,11 +31,13 @@
 
         <!-- 我的列表 -->
         <view class="my-list">
+            <navigator url="/pages/my-created/my-created" open-type ="redirect" hover-class="none">
             <view class="my-item">
                 <view class="icon icon-create"></view>
                 <text>我的创作</text>
                 <view class="arrow"></view>
             </view>
+            </navigator>
             <view class="my-item">
                 <view class="icon icon-follow"></view>
                 <text>我的关注</text>
