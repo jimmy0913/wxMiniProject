@@ -48,11 +48,13 @@
                     <view class="arrow"></view>
                 </view>
             </navigator>
-            <view class="my-item">
-                <view class="icon icon-collect"></view>
-                <text>我的收藏</text>
-                <view class="arrow"></view>
-            </view>
+            <navigator url="/pages/my-collect/my-collect" open-type ="redirect" hover-class="none">
+                <view class="my-item">
+                    <view class="icon icon-collect"></view>
+                    <text>我的收藏</text>
+                    <view class="arrow"></view>
+                </view>
+            </navigator>
             <view class="my-item">
                 <view class="icon icon-comment"></view>
                 <text>我的评论</text>
