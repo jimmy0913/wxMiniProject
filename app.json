@@ -1,12 +1,12 @@
 {
-  "pages":[
-
+  "pages":[    
     "pages/index/index",
     "pages/my/my",
     "pages/my-created/my-created",
     "pages/my-follow/my-follow",
     "pages/my-collect/my-collect",
     "pages/my-comment/my-comment",
+    "pages/my-like/my-like",
     "pages/logs/logs"
 
   ],
