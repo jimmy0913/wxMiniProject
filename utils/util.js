@@ -108,6 +108,5 @@ Util.objectToString = function(obj) {
 
 module.exports = {
   formatTime: formatTime,
-  request: request,
   Util: Util
 }
