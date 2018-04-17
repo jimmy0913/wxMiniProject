@@ -55,11 +55,13 @@
                     <view class="arrow"></view>
                 </view>
             </navigator>
-            <view class="my-item">
-                <view class="icon icon-comment"></view>
-                <text>我的评论</text>
-                <view class="arrow"></view>
-            </view>
+            <navigator url="/pages/my-comment/my-comment" open-type ="redirect" hover-class="none">
+                <view class="my-item">
+                    <view class="icon icon-comment"></view>
+                    <text>我的评论</text>
+                    <view class="arrow"></view>
+                </view>
+            </navigator>
             <view class="my-item">
                 <view class="icon icon-like"></view>
                 <text>我的点赞</text>
