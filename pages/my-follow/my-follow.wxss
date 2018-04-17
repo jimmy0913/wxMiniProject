@@ -1,0 +1,56 @@
+
+.my-follow{
+
+}
+.follow-list{
+    padding:30rpx;
+}
+.follow-item{
+    position:relative;
+    padding:30rpx 40rpx;
+    margin-bottom:30rpx;
+    background-color:#f5f5f5;
+    border-radius:6rpx;
+    overflow:hidden;
+}
+    .author-img{
+        width:120rpx;
+        height:120rpx;
+        float:left;
+        margin-right:20rpx;
+        border-radius: 50%;
+    }
+    .author-name{
+        float:left;
+        height:120rpx;
+        line-height:120rpx;
+    }
+    .author-name text{
+        font-size:30rpx;
+        color:#333;
+    }
+    .follow-item .new{
+        position:absolute;
+        right:72rpx;
+        top: 62rpx;
+        width:48rpx;
+        height:48rpx;
+        line-height:40rpx;
+        border-radius:50%;
+        text-align:center;
+        background-color:#ff5168;
+    }
+    .follow-item .new text{
+        color:#fff;
+        font-size:16rpx;
+    }
+    .arrow{
+        position:absolute;
+        right:30rpx;
+        top: 66rpx;
+        width:24rpx;
+        height:40rpx;
+        font-size:0;
+        background-image: url(http://fb.mylove920.com/iconfont/icon_arrow_r.png);
+        background-size:cover;
+    }

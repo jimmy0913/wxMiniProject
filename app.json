@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/my/my",
     "pages/my-created/my-created",
+    "pages/my-follow/my-follow",
     "pages/logs/logs"
 
   ],
