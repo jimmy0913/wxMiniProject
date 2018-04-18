@@ -1,13 +1,129 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+    <view class="index_tab_box">
+        <view class="tab_items {{tabIndex==0? 'on':''}}" bindtap="tabHandle" data-idx="0">
+            <text>推荐</text>
+        </view>
+        <view class="tab_items {{tabIndex==1? 'on':''}}" bindtap="tabHandle" data-idx="1">
+            <text>关注</text>
+        </view>
+    </view>
+    
+
+    <block wx:if="{{tabIndex==0}}">
+        <swiper class="swiper_box" autoplay="true" indicator-dots="true" indicator-active-color="#FFFFFF">
+           
+            <swiper-item>
+                <image src="/images/banner.png" class="slide-image" mode="aspectFit"/>
+            </swiper-item>
+            
+            <swiper-item>
+                <image src="/images/banner.png" class="slide-image" mode="aspectFit"/>
+            </swiper-item>
+
+        </swiper>
+
+
+        <view class="index_content">
+
+            <!-- 搜索 -->
+            <view class="search_box">
+                <input placeholder="搜索标题或标签" />
+                <icon type="search" iconSize="40" ></icon>
+            </view>
+            
+            <!-- 图文列表 -->
+            <view class="info_main_box">
+                <image src="/images/summer.jpg" ></image>
+                <view class="info_desc_box">
+                    <text class="info_txt">我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起</text>
+
+                    <view class="info_footer_box">
+                        <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                        <view class="user_info_box">
+                            <text class="name_txt">楼利英</text>
+                            <text class="date_txt">2018年4月11日</text>
+                        </view>
+                        
+                        <view class="count_box">
+                            <view class="count_info_content">
+                                <image src="/images/icon_s_thumb.png"></image>
+                                <text>1.1W</text>
+                            </view>
+                            <view class="count_info_content">
+                                <image src="/images/icon_share.png"></image>
+                                <text>100</text>
+                            </view>
+                            <view class="count_info_content">
+                                <image src="/images/icon_comment2.png"></image>
+                                <text>100</text>
+                            </view>
+                        </view>
+
+                    </view>
+                </view>
+
+            </view>
+
+
+        </view>
     </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
+    <block wx:else>
+        <view class="follow_list_container">
+            
+            <view class="follow_list">
+                <image src="/images/summer.jpg" mode="aspectFill"></image>
+                <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
+                <view class="f_count_box">
+                    <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                    <view class="f_user_box">
+                        <text class="f_name_txt">楼利英</text>
+                        <text class="f_date_txt">2018年4月11日</text>
+                    </view>
+                </view>
+            </view>
+
+            <view class="follow_list">
+                <image src="/images/summer.jpg" mode="aspectFill"></image>
+                <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
+                <view class="f_count_box">
+                    <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                    <view class="f_user_box">
+                        <text class="f_name_txt">楼利英</text>
+                        <text class="f_date_txt">2018年4月11日</text>
+                    </view>
+                </view>
+            </view>
+
+            <view class="follow_list">
+                <image src="/images/summer.jpg" mode="aspectFill"></image>
+                <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
+                <view class="f_count_box">
+                    <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                    <view class="f_user_box">
+                        <text class="f_name_txt">楼利英</text>
+                        <text class="f_date_txt">2018年4月11日</text>
+                    </view>
+                </view>
+            </view>
+
+            <view class="follow_list">
+                <image src="/images/summer.jpg" mode="aspectFill"></image>
+                <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
+                <view class="f_count_box">
+                    <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                    <view class="f_user_box">
+                        <text class="f_name_txt">楼利英</text>
+                        <text class="f_date_txt">2018年4月11日</text>
+                    </view>
+                </view>
+            </view>
+
+
+        </view>
+    </block>
+
+
 </view>
