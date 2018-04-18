@@ -1,6 +1,7 @@
 {
-  "pages":[
+  "pages":[    
     "pages/index/index",
+<<<<<<< HEAD
     "pages/todo/todo",
     "pages/me/me"
   ],
@@ -35,5 +36,22 @@
         "selectedIconPath": "/images/tabIcon3_on.png"
       }
     ]
+=======
+    "pages/my/my",
+    "pages/my-created/my-created",
+    "pages/my-follow/my-follow",
+    "pages/my-collect/my-collect",
+    "pages/my-comment/my-comment",
+    "pages/my-like/my-like",
+    "pages/logs/logs"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "图片社交",
+    "navigationBarTextStyle":"black"
+>>>>>>> 002de26a8553938a1feb0c60269ac28dbe9bd5b1
   }
 }
+

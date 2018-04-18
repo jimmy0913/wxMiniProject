@@ -1,0 +1,7 @@
+{
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "我的点赞",
+    "navigationBarBackgroundColor": "#fafafa",
+    "backgroundColor": "#fafafa",
+    "enablePullDownRefresh": true
+}

@@ -1,0 +1,7 @@
+{
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "我的创作",
+    "navigationBarBackgroundColor": "#fafafa",
+    "backgroundColor": "#fafafa",
+    "enablePullDownRefresh": true
+}

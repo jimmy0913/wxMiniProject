@@ -1,6 +1,6 @@
 <!--index.wxml-->
+<import src="../../components/fixed-bar/fixed-bar.wxml" />
 <view class="container">
-
     <view class="index_tab_box">
         <view class="tab_items {{tabIndex==0? 'on':''}}" bindtap="tabHandle" data-idx="0">
             <text>推荐</text>
@@ -9,43 +9,32 @@
             <text>关注</text>
         </view>
     </view>
-    
-
     <block wx:if="{{tabIndex==0}}">
         <swiper class="swiper_box" autoplay="true" indicator-dots="true" indicator-active-color="#FFFFFF">
-           
             <swiper-item>
-                <image src="/images/banner.png" class="slide-image" mode="aspectFit"/>
+                <image src="/images/banner.png" class="slide-image" mode="aspectFit" />
             </swiper-item>
-            
             <swiper-item>
-                <image src="/images/banner.png" class="slide-image" mode="aspectFit"/>
+                <image src="/images/banner.png" class="slide-image" mode="aspectFit" />
             </swiper-item>
-
         </swiper>
-
-
         <view class="index_content">
-
             <!-- 搜索 -->
             <view class="search_box">
                 <input placeholder="搜索标题或标签" />
-                <icon type="search" iconSize="40" ></icon>
+                <icon type="search" iconSize="40"></icon>
             </view>
-            
             <!-- 图文列表 -->
             <view class="info_main_box">
-                <image src="/images/summer.jpg" ></image>
+                <image src="/images/summer.jpg"></image>
                 <view class="info_desc_box">
                     <text class="info_txt">我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起</text>
-
                     <view class="info_footer_box">
                         <image src="/images/head_img.jpg" mode="aspectFit"></image>
                         <view class="user_info_box">
                             <text class="name_txt">楼利英</text>
                             <text class="date_txt">2018年4月11日</text>
                         </view>
-                        
                         <view class="count_box">
                             <view class="count_info_content">
                                 <image src="/images/icon_s_thumb.png"></image>
@@ -60,19 +49,13 @@
                                 <text>100</text>
                             </view>
                         </view>
-
                     </view>
                 </view>
-
             </view>
-
-
         </view>
     </block>
-
     <block wx:else>
         <view class="follow_list_container">
-            
             <view class="follow_list">
                 <image src="/images/summer.jpg" mode="aspectFill"></image>
                 <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
@@ -84,7 +67,6 @@
                     </view>
                 </view>
             </view>
-
             <view class="follow_list">
                 <image src="/images/summer.jpg" mode="aspectFill"></image>
                 <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
@@ -96,7 +78,6 @@
                     </view>
                 </view>
             </view>
-
             <view class="follow_list">
                 <image src="/images/summer.jpg" mode="aspectFill"></image>
                 <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
@@ -108,7 +89,6 @@
                     </view>
                 </view>
             </view>
-
             <view class="follow_list">
                 <image src="/images/summer.jpg" mode="aspectFill"></image>
                 <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
@@ -120,10 +100,14 @@
                     </view>
                 </view>
             </view>
-
-
         </view>
     </block>
 
 
 </view>
+
+
+<view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+</view>
+<template is="fixed-bar" data="{{page:'index'}}" />

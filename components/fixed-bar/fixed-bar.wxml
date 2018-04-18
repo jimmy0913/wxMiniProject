@@ -1,0 +1,71 @@
+<!--components/fixed-bar/fixed-bar.wxml-->
+<template name="fixed-bar">
+    <view class="fixed-menu-view">
+        <view class="fixed-menu-cont">
+            <view class="fixed-menu-li">
+                <block wx:if="{{page == 'index'}}">
+                    <view class="sel-menu-li">
+                        <view class="discover-icon">
+                        </view>
+                        <view class="fixed-menu-text">
+                            发现
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <navigator url="/pages/index/index" open-type ="redirect" hover-class="none">
+                        <view class="menu-li-view">
+                            <view class="discover-icon">
+                            </view>
+                            <view class="fixed-menu-text">
+                                发现
+                            </view>
+                        </view>
+                    </navigator>
+                </block>
+            </view>
+            <view class="fixed-menu-li">
+                <block wx:if="{{page == 'create'}}">
+                    <view class="sel-menu-li">
+                        <view class="create-icon">
+                        </view>
+                        <view class="fixed-menu-text">
+                            开始创作
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <navigator url="/pages/create/create" open-type ="redirect" hover-class="none">
+                        <view class="menu-li-view">
+                            <view class="create-icon">
+                            </view>
+                            <view class="fixed-menu-text">
+                                开始创作
+                            </view>
+                        </view>
+                    </navigator>
+                </block>
+            </view>
+            <view class="fixed-menu-li">
+                <block wx:if="{{page == 'my'}}">
+                    <view class="sel-menu-li">
+                        <view class="my-icon">
+                        </view>
+                        <view class="fixed-menu-text">
+                            我的
+                        </view>
+                    </view>
+                </block>
+                <block wx:else>
+                    <navigator url="/pages/my/my" open-type ="redirect" hover-class="none">
+                        <view class="my-icon">
+                        </view>
+                        <view class="fixed-menu-text">
+                            我的
+                        </view>
+                    </navigator>
+                </block>
+            </view>
+        </view>
+    </view>
+</template>

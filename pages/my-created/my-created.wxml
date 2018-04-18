@@ -1,0 +1,43 @@
+<import src="../../components/fixed-bar/fixed-bar.wxml" />
+
+<view class="fixed-page">
+    <view class="fixed-cont-body">
+
+        <view class="cr-list">
+            <view class="cr-item">
+                <navigator>
+                    <image src="http://pic2.sc.chinaz.com/files/pic/pic9/201804/wpic472.jpg" class="img-box"></image>
+                    <view class="detail-box">
+                        <view class="description">
+                            <text>图片简介图片简介图片简介，图片简介图片简介图片简介图片简介，图片简介，图片简介图片简介图片简介图片简介，图片简介图片简介图片简介图片简介图片简介，图片简介图片简介图片简介图片简介</text>
+                        </view>
+                        <!-- 作者信息 及转发等 -->
+                        <view class="author-box">
+                            <image src="{{authorInfo.avatarUrl}}" class="author-img"></image>
+                            <view class="author-name">
+                                <view><text class="name">{{authorInfo.nickName}}</text></view>
+                                <view><text>2018年4月17</text></view>
+                            </view>
+                            <view class="author-act">
+                                <view class="icon icon-like"></view>
+                                <text>100</text>
+                                <view class="icon icon-follow"></view>
+                                <text>100</text>
+                                <view class="icon icon-comment"></view>
+                                <text>100</text>
+                            </view>
+                        </view>
+                    </view>
+                    <!-- 底部操作 -->
+                    <view class="item-botact">
+                        <view class="botact">删除</view>
+                        <view class="botact">浏览</view>
+                        <view class="botact">编辑</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+
+    </view>
+    <template is="fixed-bar" data="{{page:'my'}}" />
+</view>

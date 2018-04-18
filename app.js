@@ -1,6 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
+    var _this = this;
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -31,7 +32,13 @@ App({
           })
         }
       }
-    })
+    });
+    //获取用户信息权限  cindylou 0417
+    wx.getUserInfo({
+        success: function(res){
+            _this.globalData.userInfo = res.userInfo
+        }
+    });
   },
   globalData: {
     userInfo: null
