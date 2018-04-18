@@ -213,3 +213,6 @@ swiper-item image{
 	font-size: 24rpx;
 	color:#CCC;
 }
+.empty_box{
+	height: 120rpx;
+}

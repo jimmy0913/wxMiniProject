@@ -1,9 +1,5 @@
 /**app.wxss**/
 .container {
-<<<<<<< HEAD
-  	height: 100%;
-} 
-=======
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -181,4 +177,3 @@ page {
 .sel-menu-li .my-icon {
     background-image: url(http://fb.mylove920.com/iconfont/tabIcon3_on.png);
 }
->>>>>>> 002de26a8553938a1feb0c60269ac28dbe9bd5b1

@@ -1,57 +1,18 @@
 {
   "pages":[    
     "pages/index/index",
-<<<<<<< HEAD
-    "pages/todo/todo",
-    "pages/me/me"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#f5f5f5",
-    "navigationBarTitleText": "图片社交",
-    "navigationBarTextStyle":"black",
-    "backgroundColor":"#FFFFFF"
-  },
-  "tabBar": {
-    "borderStyle":"white",
-    "backgroundColor":"#F5F5F5",
-    "selectedColor":"#000000",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "发现",
-        "iconPath": "/images/tabIcon1.png",
-        "selectedIconPath": "/images/tabIcon1_on.png"
-      },
-      {
-        "pagePath": "pages/todo/todo",
-        "text": "开始创作",
-        "iconPath": "/images/tabIcon2.png",
-        "selectedIconPath": "/images/tabIcon2_on.png"
-      },
-      {
-        "pagePath": "pages/me/me",
-        "text": "我的",
-        "iconPath": "/images/tabIcon3.png",
-        "selectedIconPath": "/images/tabIcon3_on.png"
-      }
-    ]
-=======
     "pages/my/my",
     "pages/my-created/my-created",
     "pages/my-follow/my-follow",
     "pages/my-collect/my-collect",
     "pages/my-comment/my-comment",
-    "pages/my-like/my-like",
-    "pages/logs/logs"
-
+    "pages/my-like/my-like"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "图片社交",
     "navigationBarTextStyle":"black"
->>>>>>> 002de26a8553938a1feb0c60269ac28dbe9bd5b1
   }
 }
 

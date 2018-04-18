@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <import src="../../components/fixed-bar/fixed-bar.wxml" />
-<view class="container">
+<view class="fixed-page">
     <view class="index_tab_box">
         <view class="tab_items {{tabIndex==0? 'on':''}}" bindtap="tabHandle" data-idx="0">
             <text>推荐</text>
@@ -102,7 +102,8 @@
             </view>
         </view>
     </block>
-
+    
+    <view class="empty_box"></view>
 
 </view>
 
