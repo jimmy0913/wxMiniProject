@@ -1,6 +1,8 @@
 {
   "pages":[    
     "pages/index/index",
+    "pages/index-detail/index-detail",
+    "pages/create/create",
     "pages/my/my",
     "pages/my-created/my-created",
     "pages/my-follow/my-follow",

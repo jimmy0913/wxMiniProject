@@ -68,6 +68,7 @@ swiper-item image{
 	border:1rpx solid rgb(206,206,206);
 	border-radius: 10rpx;
 	margin:30rpx 0;
+	cursor: pointer;
 }
 
 .info_main_box > image{

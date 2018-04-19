@@ -4,7 +4,8 @@ const app = getApp()
 
 Page({
     data: {
-        tabIndex: 0
+        tabIndex: 0,
+        authorInfo:{}
     },
     tabHandle: function(e) {
         this.tabIndex = e.currentTarget.dataset.idx;
@@ -14,6 +15,11 @@ Page({
         })
     },
     onLoad: function() {
+
+        this.setData({
+          authorInfo: getApp().globalData.userInfo
+        });
+        console.log(getApp().globalData.userInfo);
 
     },
 

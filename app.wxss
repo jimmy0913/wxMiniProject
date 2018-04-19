@@ -31,7 +31,7 @@ form {
 view,
 text {
     font-family: "PingFang SC", "Heiti SC", "SF UI Text", "Helvetica Neue", "Roboto", "Droid Sans Fallback", "arial", "sans-serif";
-    font-size: 29rpx;
+    font-size: 28rpx;
     color: #333;
 }
 

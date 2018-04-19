@@ -25,33 +25,39 @@
                 <icon type="search" iconSize="40"></icon>
             </view>
             <!-- 图文列表 -->
-            <view class="info_main_box">
-                <image src="/images/summer.jpg"></image>
-                <view class="info_desc_box">
-                    <text class="info_txt">我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起</text>
-                    <view class="info_footer_box">
-                        <image src="/images/head_img.jpg" mode="aspectFit"></image>
-                        <view class="user_info_box">
-                            <text class="name_txt">楼利英</text>
-                            <text class="date_txt">2018年4月11日</text>
-                        </view>
-                        <view class="count_box">
-                            <view class="count_info_content">
-                                <image src="/images/icon_s_thumb.png"></image>
-                                <text>1.1W</text>
+
+            <navigator url="/pages/index-detail/index-detail" open-type ="redirect" hover-class="none">
+
+                <view class="info_main_box">
+                    <image src="/images/summer.jpg"></image>
+                    <view class="info_desc_box">
+                        <text class="info_txt">我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起</text>
+                        <view class="info_footer_box">
+                            <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
+                            <view class="user_info_box">
+                                <text class="name_txt">{{authorInfo.nickName}}</text>
+                                <text class="date_txt">2018年4月11日</text>
                             </view>
-                            <view class="count_info_content">
-                                <image src="/images/icon_share.png"></image>
-                                <text>100</text>
-                            </view>
-                            <view class="count_info_content">
-                                <image src="/images/icon_comment2.png"></image>
-                                <text>100</text>
+                            <view class="count_box">
+                                <view class="count_info_content">
+                                    <image src="/images/icon_s_thumb.png"></image>
+                                    <text>1.1W</text>
+                                </view>
+                                <view class="count_info_content">
+                                    <image src="/images/icon_share.png"></image>
+                                    <text>100</text>
+                                </view>
+                                <view class="count_info_content">
+                                    <image src="/images/icon_comment2.png"></image>
+                                    <text>100</text>
+                                </view>
                             </view>
                         </view>
                     </view>
                 </view>
-            </view>
+
+            </navigator>
+
         </view>
     </block>
     <block wx:else>
