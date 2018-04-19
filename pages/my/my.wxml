@@ -31,14 +31,14 @@
 
         <!-- 我的列表 -->
         <view class="my-list">
-            <navigator url="/pages/my-created/my-created" open-type ="redirect" hover-class="none">
+            <navigator url="/pages/my-created/my-created" open-type ="navigate" hover-class="none">
                 <view class="my-item">
                     <view class="icon icon-create"></view>
                     <text>我的创作</text>
                     <view class="arrow"></view>
                 </view>
             </navigator>
-            <navigator url="/pages/my-follow/my-follow" open-type ="redirect" hover-class="none">
+            <navigator url="/pages/my-follow/my-follow" open-type ="navigate" hover-class="none">
                 <view class="my-item">
                     <view class="icon icon-follow"></view>
                     <text>我的关注</text>
@@ -48,21 +48,21 @@
                     <view class="arrow"></view>
                 </view>
             </navigator>
-            <navigator url="/pages/my-collect/my-collect" open-type ="redirect" hover-class="none">
+            <navigator url="/pages/my-collect/my-collect" open-type ="navigate" hover-class="none">
                 <view class="my-item">
                     <view class="icon icon-collect"></view>
                     <text>我的收藏</text>
                     <view class="arrow"></view>
                 </view>
             </navigator>
-            <navigator url="/pages/my-comment/my-comment" open-type ="redirect" hover-class="none">
+            <navigator url="/pages/my-comment/my-comment" open-type ="navigate" hover-class="none">
                 <view class="my-item">
                     <view class="icon icon-comment"></view>
                     <text>我的评论</text>
                     <view class="arrow"></view>
                 </view>
             </navigator>
-            <navigator url="/pages/my-like/my-like" open-type ="redirect" hover-class="none">
+            <navigator url="/pages/my-like/my-like" open-type ="navigate" hover-class="none">
                 <view class="my-item">
                     <view class="icon icon-like"></view>
                     <text>我的点赞</text>

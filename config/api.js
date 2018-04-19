@@ -14,6 +14,11 @@ var config = {
     domain,
     host,
     debug: false,
+    debugLog: function(){
+        if (config.debug) {
+            console.log.apply(console, arguments);
+        }
+    },
     //
     // 是否登陆微信
     isWxLoginUrl: `https://mgo.${domain}.com/wxAppLogin/isWxLogin`,

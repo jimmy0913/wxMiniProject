@@ -1,4 +1,8 @@
 //app.js
+import Config from './config/api';
+const isDebug = Config.debug;
+const debugLog = Config.debugLog;
+
 App({
   onLaunch: function () {
     var _this = this;
@@ -36,7 +40,14 @@ App({
     //获取用户信息权限  cindylou 0417
     wx.getUserInfo({
         success: function(res){
-            _this.globalData.userInfo = res.userInfo
+            _this.globalData.userInfo = res.userInfo;
+            // 测试时 用的console
+            debugLog('_this.globalData.userInfo');
+            debugLog(_this.globalData.userInfo);
+        },
+        fail: function(err){
+            debugLog('_this.globalData.userInfo fail');
+            debugLog(err);
         }
     });
   },
