@@ -1,0 +1,92 @@
+<import src="../../components/fixed-bar/fixed-bar.wxml" />
+
+<view class="fixed-page">
+    <view class="fixed-cont-body">
+        
+        <view class="swiper_container">
+            <swiper class="swiper_box" autoplay="true" bindchange="swiperHandle">
+                <swiper-item>
+                    <image item-id="jimmy1" src="/images/banner3.jpg" class="slide-image" mode="aspectFill" />
+                </swiper-item>
+                <swiper-item>
+                    <image item-id="jimmy2" src="/images/banner4.jpg" class="slide-image" mode="aspectFill" />
+                </swiper-item>
+            </swiper>
+
+            <view class="swiper_page_box">
+                {{swiperCurrentIdx}}/{{swiperLength}}
+            </view>
+        </view>
+
+        <view class="info_operation_box">
+            <view class="count_box">
+                <view class="count_info_content">
+                    <image src="/images/icon_s_thumb.png"></image>
+                    <text>1.1W</text>
+                </view>
+                <view class="count_info_content">
+                    <image src="/images/icon_share.png"></image>
+                    <text>100</text>
+                </view>
+                <view class="count_info_content">
+                    <image src="/images/icon_comment2.png"></image>
+                    <text>100</text>
+                </view>
+            </view>
+
+            <view class="info_collect_box">
+                <image src="/images/icon_star.png"></image>
+                <text>收藏</text>
+            </view>
+        </view>
+        
+
+        <!-- 图文信息 -->
+        <view class="photo_info_box">
+            
+            <!-- 作者信息 -->
+            <view class="author_box">
+                <view class="author_info_view">
+                    <image src="{{authorInfo.avatarUrl}}"></image>
+                    <text>{{authorInfo.nickName}}</text>
+                </view>
+                <text class="author_date_txt">2018年4月11日</text>
+            </view>
+
+            <text class="photo_summary_txt">小学篱笆旁的蒲公英，是记忆里有味道的风景，午睡操场传来蝉的声音，多少年后也还是很好听。一起长大的约定，那样清晰，打过勾的我相信，说好要一起旅行，是你如今，唯一坚持的任性。。。</text>
+
+
+            <!-- 图文标签分类 -->
+            <view class="photo_tags_box">
+                <view class="tags">风景</view>
+                <view class="tags">城市</view>
+                <view class="tags">夏日</view>
+            </view>
+            
+
+            <!-- 图文评论列表 -->
+            <view class="photo_comment_box">
+                <text class="photo_comment_title">最新评论</text>
+                <view class="commment_list">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{authorInfo.avatarUrl}}"></image>
+                            <text>{{authorInfo.nickName}}</text>
+                        </view>
+                        <text class="c_date_txt">2018年4月11日</text>
+                    </view>
+                    <view class="comment_content"></view>
+                </view>
+            </view>
+
+
+        </view>
+
+
+
+
+
+
+    </view>
+    <template is="fixed-bar" data="{{page:'index'}}" />
+</view>
