@@ -7,7 +7,8 @@ Page({
   data: {
       swiperLength:2,
       swiperCurrentIdx:1,
-      authorInfo:{}
+      authorInfo:{},
+      showDialog:false,
   },
 
 
@@ -15,6 +16,14 @@ Page({
 
       this.setData({
           swiperCurrentIdx: e.detail.current + 1
+      })
+  },
+
+  //打开评论弹出层
+  toggleDialogHandle:function(){
+      this.showDialog = !this.showDialog;
+      this.setData({
+          showDialog:this.showDialog
       })
   },
 

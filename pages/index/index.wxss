@@ -21,7 +21,7 @@
 	height: 80rpx;
 	line-height: 80rpx;
 	font-size: 30rpx;
-	color:#CCC;
+	color:#999999;
 	position: relative;
 }
 
@@ -46,9 +46,7 @@ swiper-item image{
 }
 
 
-.index_content{
-	padding:30rpx;
-}
+
 
 .search_box{
 	background-color:#F5F5F5;
@@ -59,95 +57,17 @@ swiper-item image{
 	align-items: center;
 }
 
-.search_box input{
+.search_box text{
 	font-size: 28rpx;
 	flex:1;
 }
 
-.info_main_box{
-	border:1rpx solid rgb(206,206,206);
-	border-radius: 10rpx;
-	margin:30rpx 0;
-	cursor: pointer;
+.search_box image{
+	width: 40rpx;
+	height: 40rpx;
 }
 
-.info_main_box > image{
-	width: 100%;
-	display: block;
-	height:455rpx;
-}
 
-.info_desc_box{
-	margin:0 30rpx;
-}
-
-.info_txt{
-	font-size: 28rpx;
-	margin:30rpx 0;
-
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp:2;
-	overflow: hidden;
-}
-
-.info_footer_box{
-	border-top: 1rpx solid rgb(206,206,206);
-	display: flex;
-	padding:30rpx 0;
-}
-
-.info_footer_box > image{
-	width: 90rpx;
-	height:90rpx;
-	border-radius: 50%;
-}
-
-.user_info_box{
-	width: 220rpx;
-	height: 100rpx;
-	display: flex;
-	flex-direction: column;
-}
-
-.user_info_box text{
-	line-height: 50rpx;
-	padding:0 16rpx;
-}
-
-.name_txt{
-	color:black;
-	font-size: 28rpx;
-}
-
-.date_txt{
-	color:#CCC;
-	font-size: 24rpx;
-}
-
-.count_box{
-	flex:1;
-	display: flex;
-	align-items: center;
-}
-
-.count_info_content{
-	flex:1;
-	text-align: right;
-}
-
-.count_info_content image{
-	width: 30rpx;
-	height: 30rpx;
-}
-
-.count_info_content text{
-	font-size: 24rpx;
-	color:#CCC;
-  line-height: 30rpx;
-  height: 30rpx;
-  margin-left: 6rpx;
-}
 
 .follow_list_container{
 	display: flex;
@@ -212,7 +132,7 @@ swiper-item image{
 
 .f_date_txt {
 	font-size: 24rpx;
-	color:#CCC;
+	color:#999999;
 }
 .empty_box{
 	height: 120rpx;

@@ -47,7 +47,10 @@
             <!-- 作者信息 -->
             <view class="author_box">
                 <view class="author_info_view">
-                    <image src="{{authorInfo.avatarUrl}}"></image>
+                    <navigator url="/pages/author/author" open-type ="navigate" hover-class="none">
+                        <image src="{{authorInfo.avatarUrl}}"></image>
+                    </navigator>
+
                     <text>{{authorInfo.nickName}}</text>
                 </view>
                 <text class="author_date_txt">2018年4月11日</text>
@@ -67,6 +70,7 @@
             <!-- 图文评论列表 -->
             <view class="photo_comment_box">
                 <text class="photo_comment_title">最新评论</text>
+
                 <view class="commment_list">
                     <view class="comment_info">
                         <view class="c_info_view">
@@ -75,8 +79,47 @@
                         </view>
                         <text class="c_date_txt">2018年4月11日</text>
                     </view>
-                    <view class="comment_content"></view>
+                    <view class="comment_content">朦胧的世界，我们遛了多远，冰刀划的圈，圈起来谁改变。</view>
                 </view>
+
+                <view class="commment_list">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{authorInfo.avatarUrl}}"></image>
+                            <text>{{authorInfo.nickName}}</text>
+                        </view>
+                        <text class="c_date_txt">2018年4月11日</text>
+                    </view>
+                    <view class="comment_content">你对我有多重要我后悔没让你知道，安静的听你撒娇看你睡着一直到老</view>
+                </view>
+
+                <view class="commment_list">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{authorInfo.avatarUrl}}"></image>
+                            <text>{{authorInfo.nickName}}</text>
+                        </view>
+                        <text class="c_date_txt">2018年4月11日</text>
+                    </view>
+                    <view class="comment_content">或许命运的签只让我们遇见，只让我们相恋，这一季的秋天。</view>
+                </view>
+
+                <view class="commment_list">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{authorInfo.avatarUrl}}"></image>
+                            <text>{{authorInfo.nickName}}</text>
+                        </view>
+                        <text class="c_date_txt">2018年4月11日</text>
+                    </view>
+                    <view class="comment_content">想回到过去，试着抱你在怀里，至少不再让你离我而去。</view>
+                </view>
+
+                
+                <navigator url="/pages/index-more/index-more" open-type ="navigate" hover-class="none">
+
+                    <view class="load_more_box">查看更多评论</view>
+                </navigator>
             </view>
 
 
@@ -88,5 +131,43 @@
 
 
     </view>
-    <template is="fixed-bar" data="{{page:'index'}}" />
+    
+
+    <view class="comment_fixed_footer">
+        <view class="footer_oper_box">
+            <view class="footer_c">
+                <image src="/images/icon_m_share.png"></image>
+                <text>100</text>
+            </view>
+            <view class="footer_c">
+                <image src="/images/icon_thumb1.png"></image>
+                <text>100</text>
+            </view>
+        </view>
+
+        <view class="post_comment_button" bindtap="toggleDialogHandle">
+            <image src="/images/icon_comment.png"></image>
+            <text>评论</text>
+        </view>
+
+    </view>
+
+    <!-- 弹出层 -->
+    <view class="cover_box" wx:if="{{showDialog}}" bindtap="toggleDialogHandle"></view>
+    <view class="overlay_box" wx:if="{{showDialog}}">
+        <view class="overlay_title">
+            <text>评论</text>
+            <image class="close_btn" src="/images/icon_cancel.png" mode="aspectFill" bindtap="toggleDialogHandle"></image>
+        </view>
+        
+        <view class="textarea_box">
+            <textarea placeholder="写下您的评论" name="textarea" />
+        </view>
+
+        <button class="send_btn">发送</button>
+    </view>
+
+
+
+    <!-- <template is="fixed-bar" data="{{page:'index'}}" /> -->
 </view>

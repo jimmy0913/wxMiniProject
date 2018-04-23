@@ -1,0 +1,19 @@
+/* pages/index-search/index-search.wxss */
+.search_container{
+	margin:30rpx 30rpx 0 30rpx;
+	display: flex;
+	align-items: center;
+}
+
+.search_container input{
+	flex:1;
+	background-color: #F5F5F5;
+	border-radius: 35rpx;
+	height: 70rpx;
+	padding:0 35rpx;
+}
+.search_container text{
+	width: 90rpx;
+	text-align:center;
+	color:#999999;
+}

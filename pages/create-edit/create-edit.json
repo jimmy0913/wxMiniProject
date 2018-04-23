@@ -1,7 +1,7 @@
 {
   "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "开始创作",
+  "navigationBarTitleText": "编辑图片",
   "navigationBarBackgroundColor": "#fafafa",
   "backgroundColor": "#fafafa",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": false
 }

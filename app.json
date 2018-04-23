@@ -1,8 +1,12 @@
 {
-  "pages":[    
+  "pages": [
     "pages/index/index",
+    "pages/index-search/index-search",
     "pages/index-detail/index-detail",
+    "pages/index-more/index-more",
+    "pages/author/author",
     "pages/create/create",
+    "pages/create-edit/create-edit",
     "pages/my/my",
     "pages/my-created/my-created",
     "pages/my-follow/my-follow",
@@ -10,11 +14,10 @@
     "pages/my-comment/my-comment",
     "pages/my-like/my-like"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "图片社交",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }
-

@@ -1,0 +1,76 @@
+<import src="../../components/fixed-bar/fixed-bar.wxml" />
+
+<view class="fixed-page">
+    <view class="fixed-cont-body">
+        
+        
+        <!-- 图文信息 -->
+        <view class="photo_info_box">
+            
+            <!-- 图文评论列表 -->
+            <view class="photo_comment_box">
+                <view class="commment_list">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{authorInfo.avatarUrl}}"></image>
+                            <text>{{authorInfo.nickName}}</text>
+                        </view>
+                        <text class="c_date_txt">2018年4月11日</text>
+                    </view>
+                    <view class="comment_content">朦胧的世界，我们遛了多远，冰刀划的圈，圈起来谁改变。</view>
+                </view>
+
+                <view class="commment_list">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{authorInfo.avatarUrl}}"></image>
+                            <text>{{authorInfo.nickName}}</text>
+                        </view>
+                        <text class="c_date_txt">2018年4月11日</text>
+                    </view>
+                    <view class="comment_content">你对我有多重要我后悔没让你知道，安静的听你撒娇看你睡着一直到老</view>
+                </view>
+
+                <view class="commment_list">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{authorInfo.avatarUrl}}"></image>
+                            <text>{{authorInfo.nickName}}</text>
+                        </view>
+                        <text class="c_date_txt">2018年4月11日</text>
+                    </view>
+                    <view class="comment_content">或许命运的签只让我们遇见，只让我们相恋，这一季的秋天。</view>
+                </view>
+
+                <view class="commment_list">
+                    <view class="comment_info">
+                        <view class="c_info_view">
+                            <image src="{{authorInfo.avatarUrl}}"></image>
+                            <text>{{authorInfo.nickName}}</text>
+                        </view>
+                        <text class="c_date_txt">2018年4月11日</text>
+                    </view>
+                    <view class="comment_content">想回到过去，试着抱你在怀里，至少不再让你离我而去。</view>
+                </view>
+
+
+            </view>
+
+
+        </view>
+		
+
+
+		<view class="footer_comment_box">
+			<view class="footer_comment_input">
+				<input class="" placeholder="写下您的评论..." />
+			</view>	
+			<text>发送</text>
+		</view>
+
+    </view>
+    
+
+	
+    <!-- <template is="fixed-bar" data="{{page:'index'}}" /> -->
+</view>

@@ -20,13 +20,17 @@
         </swiper>
         <view class="index_content">
             <!-- 搜索 -->
-            <view class="search_box">
-                <input placeholder="搜索标题或标签" />
-                <icon type="search" iconSize="40"></icon>
-            </view>
+
+            <navigator url="/pages/index-search/index-search" open-type ="navigate" hover-class="none">
+                <view class="search_box">
+                    <text>搜索标题或标签</text>
+                    <icon type="search" iconSize="40"></icon>
+                </view>
+            </navigator>
+
             <!-- 图文列表 -->
 
-            <navigator url="/pages/index-detail/index-detail" open-type ="redirect" hover-class="none">
+            <navigator url="/pages/index-detail/index-detail" open-type ="navigate" hover-class="none">
 
                 <view class="info_main_box">
                     <image src="/images/summer.jpg"></image>

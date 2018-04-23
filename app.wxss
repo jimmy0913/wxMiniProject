@@ -35,6 +35,13 @@ text {
     color: #333;
 }
 
+textarea{
+    background-color: snow;
+    padding:23rpx 29rpx; 
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
 
 /* lib */
 
@@ -176,4 +183,142 @@ page {
 }
 .sel-menu-li .my-icon {
     background-image: url(http://fb.mylove920.com/iconfont/tabIcon3_on.png);
+}
+
+
+
+
+/*  作者信息  */
+.author-info{
+    position:relative;
+    height: 340rpx;
+    background-image: url(http://fb.mylove920.com/iconfont/banner2.png);
+    font-size:28rpx;
+}
+.author-info text{
+    color:#fff;
+}
+.author-detail{
+    padding: 60rpx 0 20rpx;
+    text-align:center;
+}
+.author-detail image{
+    display:block;
+    width: 100rpx;
+    height:100rpx;
+    margin:0 auto 10rpx;
+    border-radius:50%;
+}
+
+.effects{
+    overflow:hidden;
+}
+    .effects-item{
+        box-sizing: border-box;
+        width:25%;
+        float:left;
+        border-right:1rpx solid #666;
+        text-align:center;
+    }
+    .effects-item:last-child{
+        border:0;
+    }
+    .effects-item .number{
+        display:block;
+        font-weight:bold;
+        font-size:30rpx;
+        color:#fff;
+    }
+    .effects-item text{
+        color:#666;
+    }
+
+/* 首页图文详情 */
+.index_content{
+    padding:30rpx;
+}
+
+.info_main_box{
+    border:1rpx solid rgb(206,206,206);
+    border-radius: 10rpx;
+    margin:30rpx 0;
+    cursor: pointer;
+}
+
+.info_main_box > image{
+    width: 100%;
+    display: block;
+    height:455rpx;
+}
+
+.info_desc_box{
+    margin:0 30rpx;
+}
+
+.info_txt{
+    font-size: 28rpx;
+    margin:30rpx 0;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+}
+
+.info_footer_box{
+    border-top: 1rpx solid rgb(206,206,206);
+    display: flex;
+    padding:30rpx 0;
+}
+
+.info_footer_box > image{
+    width: 90rpx;
+    height:90rpx;
+    border-radius: 50%;
+}
+
+.user_info_box{
+    width: 220rpx;
+    height: 100rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.user_info_box text{
+    line-height: 50rpx;
+    padding:0 16rpx;
+}
+
+.name_txt{
+    color:black;
+    font-size: 28rpx;
+}
+
+.date_txt{
+    color:#CCC;
+    font-size: 24rpx;
+}
+
+.count_box{
+    flex:1;
+    display: flex;
+    align-items: center;
+}
+
+.count_info_content{
+    flex:1;
+    text-align: right;
+}
+
+.count_info_content image{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.count_info_content text{
+    font-size: 24rpx;
+    color:#CCC;
+  line-height: 30rpx;
+  height: 30rpx;
+  margin-left: 6rpx;
 }

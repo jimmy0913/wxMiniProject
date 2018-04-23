@@ -1,1 +1,23 @@
 /* pages/create/create.wxss */
+
+.flex_center{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.start_txt{
+	margin: 160rpx auto 120rpx;
+	font-size: 40rpx;
+	display: block;
+}
+
+.add_img_btn{
+	width: 200rpx;
+	height: 200rpx;
+}
+
+.add_txt{
+	display: block;
+	margin-top: 20rpx;
+	font-size: 40rpx;
+}

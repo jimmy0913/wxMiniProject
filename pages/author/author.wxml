@@ -1,0 +1,110 @@
+<import src="../../components/fixed-bar/fixed-bar.wxml" />
+
+<view class="fixed-page">
+    <view class="fixed-cont-body">
+        
+        
+        <!-- 作者信息  -->
+        <view class="author-info">
+        	<view class="follow_btn">
+        		<image src="/images/icon_follow.png" mode="aspectFit"></image>
+        		<text>关注</text>
+        	</view>
+            <view class="author-detail">
+              <!--<image src="http://fb.mylove920.com/iconfont/icon_m_star.png"></image>-->
+              <image src="{{authorInfo.avatarUrl}}"></image>
+              <text>{{authorInfo.nickName}}</text>
+            </view>
+            <view class="effects">
+                <view class="effects-item">
+                    <text class="number">30</text>
+                    <text>点赞量</text>
+                </view>
+                <view class="effects-item">
+                    <text class="number">30</text>
+                    <text>转发量</text>
+                </view>
+                <view class="effects-item">
+                    <text class="number">30</text>
+                    <text>评论量</text>
+                </view>
+                <view class="effects-item">
+                    <text class="number">30</text>
+                    <text>关注量</text>
+                </view>
+            </view>
+        </view>
+
+
+        <!-- 图文 -->
+        <view class="index_content">
+			<view class="info_main_box">
+			    <image src="/images/summer.jpg"></image>
+			    <view class="info_desc_box">
+			        <text class="info_txt">我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起</text>
+			        <view class="info_footer_box">
+			            <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
+			            <view class="user_info_box">
+			                <text class="name_txt">{{authorInfo.nickName}}</text>
+			                <text class="date_txt">2018年4月11日</text>
+			            </view>
+			            <view class="count_box">
+			                <view class="count_info_content">
+			                    <image src="/images/icon_s_thumb.png"></image>
+			                    <text>1.1W</text>
+			                </view>
+			                <view class="count_info_content">
+			                    <image src="/images/icon_share.png"></image>
+			                    <text>100</text>
+			                </view>
+			                <view class="count_info_content">
+			                    <image src="/images/icon_comment2.png"></image>
+			                    <text>100</text>
+			                </view>
+			            </view>
+			        </view>
+			    </view>
+			</view>
+
+			<view class="info_main_box">
+			    <image src="/images/summer.jpg"></image>
+			    <view class="info_desc_box">
+			        <text class="info_txt">我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起</text>
+			        <view class="info_footer_box">
+			            <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
+			            <view class="user_info_box">
+			                <text class="name_txt">{{authorInfo.nickName}}</text>
+			                <text class="date_txt">2018年4月11日</text>
+			            </view>
+			            <view class="count_box">
+			                <view class="count_info_content">
+			                    <image src="/images/icon_s_thumb.png"></image>
+			                    <text>1.1W</text>
+			                </view>
+			                <view class="count_info_content">
+			                    <image src="/images/icon_share.png"></image>
+			                    <text>100</text>
+			                </view>
+			                <view class="count_info_content">
+			                    <image src="/images/icon_comment2.png"></image>
+			                    <text>100</text>
+			                </view>
+			            </view>
+			        </view>
+			    </view>
+			</view>
+
+		</view>
+
+
+
+		
+
+	
+
+    </view>
+    
+
+	
+    <!-- <template is="fixed-bar" data="{{page:'index'}}" /> -->
+</view>

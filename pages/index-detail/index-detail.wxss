@@ -26,7 +26,6 @@
     color: snow;
     text-align: center;
     background-color: rgba(153, 153, 153, .6);
-    text-align: center;
     border-radius: 12rpx;
 }
 
@@ -34,14 +33,13 @@
     height: 77rpx;
     background-color: #F5F5F5;
     padding: 0 30rpx;
-    align-items: center;
-    display: flex;
     position: relative;
     justify-content: flex-start;
 }
 
 .count_box {
     width: 50%;
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -60,7 +58,7 @@
 
 .count_info_content text {
     font-size: 24rpx;
-    color: #CCC;
+    color: #999999;
     line-height: 30rpx;
     height: 30rpx;
     margin-left: 6rpx;
@@ -68,10 +66,11 @@
 
 .info_collect_box{
 	width: 110rpx;
-	height:36rpx;
+	height:100%;
 	display: flex;
 	position: absolute;
 	right:30rpx;
+  top: 0;
 	align-items: center;
 }
 
@@ -80,7 +79,7 @@
 	height: 36rpx;
 }
 .info_collect_box text{
-	color:#CCC;
+	color:#999999;
 	text-align: right;
 	margin-left: 10rpx;
 }
@@ -113,7 +112,7 @@
 .author_date_txt{
 	position: absolute;
 	right: 0;
-	color:#CCC;
+	color:#999999;
 	height: 37rpx;
 	top: 22rpx;
 }
@@ -171,12 +170,161 @@
 .comment_info{
 	position: relative;
 	height: 60rpx;
+	margin-top: 20rpx;
+}
+
+.c_info_view{
+	display: flex;
+	align-items: center;
+}
+
+.c_info_view image{
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 50%;
+}
+.c_info_view text{
+	height: 60rpx;
+	line-height: 60rpx;
+	margin-left: 20rpx;
 }
 
 .c_date_txt{
 	position: absolute;
 	right: 0;
+	top: 12rpx;
 	height: 37rpx;
 	line-height: 37rpx;
-	color:#CCC;
+	color:#999999;
+	font-size: 24rpx;
 }
+
+.comment_content{
+	line-height: 40rpx;
+	margin:20rpx 0 0 80rpx;
+	padding-bottom: 30rpx;
+	border-bottom: 1rpx solid rgb(206,206,206);
+}
+
+
+.load_more_box{
+	width: 168rpx;
+	height: 40rpx;
+	padding:21rpx 67rpx;
+	border-radius: 45rpx;
+	margin:27rpx auto;
+	text-align: center;
+	border:2rpx solid rgb(206,206,206);
+}
+
+.comment_fixed_footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 110rpx;
+	background-color: #F5F5F5;
+	z-index: 1;
+}
+
+.footer_oper_box{
+	width: 58%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.footer_c{
+	display: flex;	
+}
+
+.footer_c image{
+	width: 48rpx;
+	height: 48rpx;
+	margin-left: 50rpx;
+}
+.footer_c text{
+	margin-left: 10rpx;
+	font-size: 36rpx;
+	color:#333;
+}
+
+.post_comment_button{
+	width: 42%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: #ff5167;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+.post_comment_button image{
+	width: 64rpx;
+	height: 64rpx;
+}
+
+.post_comment_button text{
+	color:snow;
+	margin-left: 14rpx;
+	font-size: 36rpx;
+}
+
+.cover_box{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: rgba(0,0,0,.5);
+	top: 0;
+	left: 0;
+}
+
+.overlay_box{
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 3;
+	padding:30rpx 40rpx;
+	height: 500rpx;
+	background-color: #F5F5F5;
+	bottom: 0;
+}
+
+.overlay_title{
+	position: relative;
+	height: 48rpx;
+}
+
+.overlay_title text{
+	font-size: 34rpx;
+}
+.overlay_title image{
+	position: absolute;
+	right: 0;
+	width: 36rpx;
+	height: 36rpx;
+	top: 6rpx;
+}
+
+.textarea_box{
+	height: 213rpx;
+	border-radius: 10rpx;
+	border:1rpx solid rgb(206,206,206);
+	margin-top: 30rpx;
+	overflow: hidden;
+}
+
+.send_btn{
+	color:snow;
+	padding:10rpx 100rpx;
+	border-radius: 70rpx;
+	background-color: #ff5167;
+	display: inline-block;
+	float: right;
+	margin-top: 40rpx;
+}
+
+

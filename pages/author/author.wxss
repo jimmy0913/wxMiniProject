@@ -1,0 +1,31 @@
+/* pages/author/author.wxss */
+
+.info_main_box:first-child{
+	margin-top: 0;
+}
+
+.follow_btn{
+	position: absolute;
+	right: 20rpx;
+	top: 20rpx;
+	background-color: rgba(255,81,103,.8);
+	display: flex;
+	padding:4rpx 0;
+	border-radius: 8rpx;
+}
+
+.follow_btn image,.follow_btn text{
+	flex:1;
+}
+
+.follow_btn image{
+	width: 32rpx;
+	height: 32rpx;
+	margin-top: 6rpx;
+}
+
+.follow_btn text{
+	width: 80rpx;
+	color:snow;
+	padding: 0 12rpx;
+}

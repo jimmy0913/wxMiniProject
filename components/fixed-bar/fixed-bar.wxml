@@ -13,7 +13,7 @@
                     </view>
                 </block>
                 <block wx:else>
-                    <navigator url="/pages/index/index" open-type ="navigate" hover-class="none">
+                    <navigator url="/pages/index/index" open-type ="redirect" hover-class="none">
                         <view class="menu-li-view">
                             <view class="discover-icon">
                             </view>
@@ -35,7 +35,7 @@
                     </view>
                 </block>
                 <block wx:else>
-                    <navigator url="/pages/create/create" open-type ="navigate" hover-class="none">
+                    <navigator url="/pages/create/create" open-type ="redirect" hover-class="none">
                         <view class="menu-li-view">
                             <view class="create-icon">
                             </view>
@@ -57,7 +57,7 @@
                     </view>
                 </block>
                 <block wx:else>
-                    <navigator url="/pages/my/my" open-type ="navigate" hover-class="none">
+                    <navigator url="/pages/my/my" open-type ="redirect" hover-class="none">
                         <view class="my-icon">
                         </view>
                         <view class="fixed-menu-text">

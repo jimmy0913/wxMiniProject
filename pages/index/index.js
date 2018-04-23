@@ -13,6 +13,8 @@ Page({
         this.setData({
       		tabIndex:this.tabIndex  	
         })
+
+
     },
     onLoad: function() {
 

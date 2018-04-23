@@ -1,0 +1,143 @@
+/* pages/create-edit/create-edit.wxss */
+
+.tags_banner_box{
+	width: 100%;
+	height: 200rpx;
+	position: relative;
+}
+
+.tags_banner_box > image{
+	width: 100%;
+	height: 200rpx;
+	display: block;
+}
+.tags_box{
+	position: absolute;
+	bottom: 20rpx;
+	left: 30rpx;
+	display: flex;
+}
+
+.tags{
+	position: relative;
+	width: 114rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	margin-right: 25rpx;
+	text-align: center;
+	background-color: rgba(255,255,255,.8);
+	float: left;
+}
+
+.tags::before{
+	content:'';
+	position: absolute;
+	left: -6rpx;
+	width: 6rpx;
+	height: 100%;
+	background-color:#ff5167;
+	border-top-left-radius: 6rpx;
+	border-bottom-left-radius: 6rpx;
+}
+
+.add_box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border:1px solid #979797;
+	border-radius:100px;
+	width: 280rpx;
+	margin:19rpx auto 22rpx;
+	padding:16rpx 0;
+}
+
+.add_box image{
+	width: 40rpx;
+	height: 40rpx;
+}
+.add_box text{
+	width: 112rpx;
+	height: 40rpx;
+	margin-left: 10rpx;
+}
+
+.fixed_footer_btn{
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	color:#333;
+}
+
+.edit_list_container{
+	margin:0 35rpx;
+}	
+
+.edit_list{
+	border:1rpx solid rgb(206,206,206);
+	box-sizing: border-box;
+	padding:35rpx;
+	position: relative;
+	border-radius: 10rpx;
+	margin-bottom: 30rpx;
+}
+
+.del_btn{
+	width: 32rpx;
+	height: 32rpx;
+	position: absolute;
+	top: -20rpx;
+	left: -20rpx;
+	background-color:white;
+	padding:6rpx;
+}
+
+.edit_list_cont{
+	position: relative;
+	padding:0 110rpx 0 220rpx;
+}
+
+.edit_list_cont > image{
+	width: 200rpx;
+	height: 200rpx;
+	top: 0;
+	left:0;
+	position: absolute;
+}
+
+.edit_list_txt{
+	display: block;
+	height: 200rpx;
+	color:#999999;
+}
+
+.move_box{
+	width: 150rpx;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.moveable{
+	position: absolute;
+	right:0;
+}
+.move_up{
+	top:0;
+}
+.move_down{
+	bottom:0;
+}
+
+.moveable{
+	display: flex;
+	align-items: center;
+}
+
+.moveable image{
+	width: 36rpx;
+	height: 36rpx;
+}
+.moveable text{
+	margin-left: 10rpx;
+}

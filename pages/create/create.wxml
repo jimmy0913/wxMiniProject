@@ -1,2 +1,21 @@
-<!--pages/create/create.wxml-->
-<text>pages/create/create.wxml</text>
+<import src="../../components/fixed-bar/fixed-bar.wxml" />
+
+<view class="fixed-page">
+    <view class="fixed-cont-body">
+            
+
+    	<view class="flex_center">
+	    	<text class="start_txt">开始创作</text>
+
+	    	<navigator url="/pages/create-edit/create-edit" open-type ="navigate" hover-class="none">
+	    		<image class="add_img_btn" src="/images/add_image.png"></image>
+    		</navigator>
+			<text class="add_txt">添加图片</text>
+    	</view>
+		
+    </view>
+    
+
+	
+    <template is="fixed-bar" data="{{page:'create'}}" />
+</view>

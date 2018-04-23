@@ -1,1 +1,7 @@
-{}
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "图片详情",
+  "navigationBarBackgroundColor": "#fafafa",
+  "backgroundColor": "#fafafa",
+  "enablePullDownRefresh": true
+}
