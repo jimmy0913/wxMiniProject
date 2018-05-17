@@ -1,29 +1,29 @@
-<!-- <import src="../../components/fixed-bar/fixed-bar.wxml" /> -->
-
 <view class="fixed-page">
     <view class="fixed-cont-body">
         <!-- 作者信息  -->
         <view class="author-info">
             <view class="author-detail">
               <!--<image src="http://fb.mylove920.com/iconfont/icon_m_star.png"></image>-->
-              <image src="{{authorInfo.avatarUrl}}"></image>
-              <text>{{authorInfo.nickName}}</text>
+              <!--<image src="{{authorInfo.avatarUrl}}"></image>-->
+              <!-- <text>{{authorInfo.nickName}}</text> -->
+              <image src="{{myData.user_info.head_pic}}"></image>
+              <text>{{myData.user_info.nickname}}</text>
             </view>
             <view class="effects">
                 <view class="effects-item">
-                    <text class="number">30</text>
+                    <text class="number">{{myData.total_like || 0}}</text>
                     <text>点赞量</text>
                 </view>
                 <view class="effects-item">
-                    <text class="number">30</text>
+                    <text class="number">{{myData.total_reply || 0}}</text>
                     <text>转发量</text>
                 </view>
                 <view class="effects-item">
-                    <text class="number">30</text>
+                    <text class="number">{{myData.total_comment || 0}}</text>
                     <text>评论量</text>
                 </view>
                 <view class="effects-item">
-                    <text class="number">30</text>
+                    <text class="number">{{myData.total_follow || 0}}</text>
                     <text>关注量</text>
                 </view>
             </view>
@@ -71,5 +71,4 @@
             </navigator>
         </view>
     </view>
-    <!-- <template is="fixed-bar" data="{{page:'my'}}" /> -->
 </view>
