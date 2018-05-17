@@ -19,21 +19,24 @@ Page({
 
     },
     onLoad: function() {
-
-        this.setData({
+        let _this = this;
+        _this.setData({
+            // token: getApp().globalData.token,
             authorInfo: getApp().globalData.userInfo
         });
-
-        console.log(app.globalData);
-
+        _this.bindGetUserInfo(function(){
+            let token = _this.data.token;
+            wx.setStorageSync('token', token);
+            console.log('222222222:', token);
+        });
     },
 
     onLaunch: function() {
 
     },
 
-    bindGetUserInfo: function(e) {
-        
+    bindGetUserInfo: function(callback) {
+        let _this = this;
         // 登录
         wx.login({
             success: res => {
@@ -68,7 +71,14 @@ Page({
                                                     title: '登录成功',
                                                     icon: 'success',
                                                     duration: 2000
-                                                })
+                                                });
+                                                 // _this.globalData.token = ret.data.data;
+                                                 _this.setData({
+                                                    token: ret.data.data
+                                                 });
+                                                 if (typeof callback === 'function') {
+                                                    callback();
+                                                 }
                                             } else {
                                                 wx.showToast({
                                                     title: ret.data.msg,
@@ -101,7 +111,7 @@ Page({
 
             }
         })
-        
+
     }
 
 })

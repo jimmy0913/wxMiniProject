@@ -7,7 +7,7 @@ var ENV = "prod";
 
 var domain = 'sit';
 var imgUrl = '';
-var host = "";
+var host = 'https://img.xiarikui08.com/';
 
 var config = {
     imgUrl,
@@ -20,8 +20,8 @@ var config = {
         }
     },
     //
-    // 是否登陆微信
-    isWxLoginUrl: `https://mgo.${domain}.com/wxAppLogin/isWxLogin`,
+    // 个人中心首页
+    my: host + 'api/user/index',
     //
     wxLoginUrl: `https://mgo.${domain}.com/wxAppLogin/wxLogin`,
     // 首页接口

@@ -4,6 +4,9 @@ const isDebug = Config.debug;
 const debugLog = Config.debugLog;
 
 App({
+    data: {
+        token: ''
+    },
     onLaunch: function() {
         var _this = this;
         // 展示本地存储能力
@@ -12,7 +15,7 @@ App({
         wx.setStorageSync('logs', logs)
 
         // 登录
-        wx.login({
+       /* wx.login({
             success: res => {
                 // 发送 res.code 到后台换取 openId, sessionKey, unionId
                 this.code = res.code;
@@ -45,9 +48,9 @@ App({
                                                     title: '登录成功',
                                                     icon: 'success',
                                                     duration: 2000
-                                                })
-
+                                                });
                                                 _this.globalData.token = ret.data.data;
+                                                 console.log('111111111111111:', _this.globalData.token);
 
                                             } else {
                                                 wx.showToast({
@@ -86,10 +89,10 @@ App({
 
 
             }
-        })
+        })*/
 
 
-        //获取用户信息权限  
+        //获取用户信息权限
         wx.getUserInfo({
             success: function(res) {
                 _this.globalData.userInfo = res.userInfo;

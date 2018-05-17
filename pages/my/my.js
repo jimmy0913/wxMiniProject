@@ -1,3 +1,4 @@
+import { config } from '../../config/api.js';
 Page({
     data: {
       authorInfo:{
