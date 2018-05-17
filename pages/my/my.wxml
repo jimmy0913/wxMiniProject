@@ -43,7 +43,7 @@
                     <view class="icon icon-follow"></view>
                     <text>我的关注</text>
                     <view class="new">
-                        <text>1</text>
+                        <text>{{myData.total_news || 0}}</text>
                     </view>
                     <view class="arrow"></view>
                 </view>

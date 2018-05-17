@@ -2,24 +2,31 @@
 
 <view class="fixed-page">
     <view class="fixed-cont-body">
-        <view class="follow-list">
-            <navigator>
-                <view class="follow-item">
-                    <image class="author-img" src="{{authorInfo.avatarUrl}}"></image>
-                    <view class="author-name"><text>{{authorInfo.nickName}}</text></view>
-                    <view class="new"><text>10</text></view>
-                    <view class="arrow"></view>
-                </view>
-            </navigator>
-            <navigator>
-                <view class="follow-item">
-                    <image class="author-img" src="{{authorInfo.avatarUrl}}"></image>
-                    <view class="author-name"><text>{{authorInfo.nickName}}</text></view>
-                    <view class="new"><text>10</text></view>
-                    <view class="arrow"></view>
-                </view>
-            </navigator>
-        </view>
+        <block  wx:if="{{myData.list.length > 0}}">
+            <view class="follow-list">
+                <navigator wx:for="{{myData.list}}" wx:for-index="idx" wx:for-item="item">
+                    <view class="follow-item" useId="{{item.user_id}}">
+                        <image class="author-img" src="{{item.head_pic}}"></image>
+                        <view class="author-name"><text>{{item.nickname}}</text></view>
+                        <view class="new"><text>{{item.new_num}}</text></view>
+                        <view class="arrow"></view>
+                    </view>
+                </navigator>
+                <!--<navigator>
+                    <view class="follow-item">
+                        <image class="author-img" src="{{authorInfo.avatarUrl}}"></image>
+                        <view class="author-name"><text>{{authorInfo.nickName}}</text></view>
+                        <view class="new"><text>10</text></view>
+                        <view class="arrow"></view>
+                    </view>
+                </navigator>-->
+            </view>
+        </block>
+        <block wx:else>
+            <view class="no-data">
+                <text>您还没有关注信息</text>
+            </view>
+        </block>
 
 
     </view>

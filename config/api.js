@@ -22,6 +22,8 @@ var config = {
     //
     // 个人中心首页
     my: host + 'api/user/index',
+    // 我的关注列表
+    myFollow: host + 'api/user/my_follow',
     //
     wxLoginUrl: `https://mgo.${domain}.com/wxAppLogin/wxLogin`,
     // 首页接口

@@ -23,12 +23,18 @@
 }
 
 .description{
-    height: 100rpx;
-    padding-bottom:16repx;
     margin-bottom:26rpx;
     font-size:28rpx;
-    color:#4f4f4f;
     border-bottom:1rpx solid #e6e6e6;
+}
+.description text{
+    display:block;
+    height: 96rpx;
+    color:#4f4f4f;
+    margin-bottom:16rpx;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
     overflow:hidden;
 }
 

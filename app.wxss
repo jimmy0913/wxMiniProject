@@ -37,7 +37,7 @@ text {
 
 textarea{
     background-color: snow;
-    padding:23rpx 29rpx; 
+    padding:23rpx 29rpx;
     box-sizing: border-box;
     display: block;
     width: 100%;
@@ -321,4 +321,10 @@ page {
   line-height: 30rpx;
   height: 30rpx;
   margin-left: 6rpx;
+}
+
+.no-data{
+    padding: 80rpx 0;
+    font-size: 28rpx;
+    text-align:center;
 }
