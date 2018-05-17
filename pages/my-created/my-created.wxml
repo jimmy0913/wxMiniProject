@@ -1,4 +1,4 @@
-<import src="../../components/fixed-bar/fixed-bar.wxml" />
+<!-- <import src="../../components/fixed-bar/fixed-bar.wxml" /> -->
 
 <view class="fixed-page">
     <view class="fixed-cont-body">
@@ -39,5 +39,5 @@
         </view>
 
     </view>
-    <template is="fixed-bar" data="{{page:'my'}}" />
+    <!-- <template is="fixed-bar" data="{{page:'my'}}" /> -->
 </view>

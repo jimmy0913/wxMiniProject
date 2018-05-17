@@ -3,5 +3,5 @@
   "navigationBarTitleText": "开始创作",
   "navigationBarBackgroundColor": "#fafafa",
   "backgroundColor": "#fafafa",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": false
 }

@@ -1,4 +1,4 @@
-<import src="../../components/fixed-bar/fixed-bar.wxml" />
+<!-- <import src="../../components/fixed-bar/fixed-bar.wxml" /> -->
 
 <view class="fixed-page">
     <view class="fixed-cont-body">

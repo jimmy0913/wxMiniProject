@@ -1,4 +1,4 @@
-<import src="../../components/fixed-bar/fixed-bar.wxml" />
+<!-- <import src="../../components/fixed-bar/fixed-bar.wxml" /> -->
 
 <view class="fixed-page">
     <view class="fixed-cont-body">
@@ -15,7 +15,7 @@
 		    <view class="info_main_box">
 		        <image src="/images/summer.jpg"></image>
 		        <view class="info_desc_box">
-		            <text class="info_txt">我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起</text>
+		            <text class="info_txt">一起长大的约定，那样清晰，打过勾的我相信，说好要一起旅行，是你如今，唯一坚持的任性。。。小学篱笆旁的蒲公英，是记忆里有味道的风景，午睡操场传来蝉的声音，多少年后也还是很好听。一起长大的约定，那样清晰，打过勾的我相信，说好要一起旅行，是你如今，唯一坚持的任性。。。</text>
 		            <view class="info_footer_box">
 		                <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
 		                <view class="user_info_box">

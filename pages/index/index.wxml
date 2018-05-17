@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<import src="../../components/fixed-bar/fixed-bar.wxml" />
+<!-- <import src="../../components/fixed-bar/fixed-bar.wxml" /> -->
 <view class="fixed-page">
     <view class="index_tab_box">
         <view class="tab_items {{tabIndex==0? 'on':''}}" bindtap="tabHandle" data-idx="0">
@@ -29,13 +29,17 @@
             </navigator>
 
             <!-- 图文列表 -->
+            <!-- 需要使用 button 来授权登录 -->
+            <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+            <view wx:else>请升级微信版本</view>
+
 
             <navigator url="/pages/index-detail/index-detail" open-type ="navigate" hover-class="none">
 
                 <view class="info_main_box">
                     <image src="/images/summer.jpg"></image>
                     <view class="info_desc_box">
-                        <text class="info_txt">我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起我们说好不分离，要一直一直在一起</text>
+                        <text class="info_txt">小学篱笆旁的蒲公英，是记忆里有味道的风景，午睡操场传来蝉的声音，多少年后也还是很好听。一起长大的约定，那样清晰，打过勾的我相信，说好要一起旅行，是你如今，唯一坚持的任性。。。小学篱笆旁的蒲公英，是记忆里有味道的风景，午睡操场传来蝉的声音，多少年后也还是很好听。</text>
                         <view class="info_footer_box">
                             <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
                             <view class="user_info_box">
@@ -70,9 +74,9 @@
                 <image src="/images/summer.jpg" mode="aspectFill"></image>
                 <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
                 <view class="f_count_box">
-                    <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                    <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
                     <view class="f_user_box">
-                        <text class="f_name_txt">楼利英</text>
+                        <text class="f_name_txt">{{authorInfo.nickName}}</text>
                         <text class="f_date_txt">2018年4月11日</text>
                     </view>
                 </view>
@@ -81,9 +85,9 @@
                 <image src="/images/summer.jpg" mode="aspectFill"></image>
                 <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
                 <view class="f_count_box">
-                    <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                    <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
                     <view class="f_user_box">
-                        <text class="f_name_txt">楼利英</text>
+                        <text class="f_name_txt">{{authorInfo.nickName}}</text>
                         <text class="f_date_txt">2018年4月11日</text>
                     </view>
                 </view>
@@ -92,9 +96,9 @@
                 <image src="/images/summer.jpg" mode="aspectFill"></image>
                 <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
                 <view class="f_count_box">
-                    <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                    <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
                     <view class="f_user_box">
-                        <text class="f_name_txt">楼利英</text>
+                        <text class="f_name_txt">{{authorInfo.nickName}}</text>
                         <text class="f_date_txt">2018年4月11日</text>
                     </view>
                 </view>
@@ -103,22 +107,16 @@
                 <image src="/images/summer.jpg" mode="aspectFill"></image>
                 <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
                 <view class="f_count_box">
-                    <image src="/images/head_img.jpg" mode="aspectFit"></image>
+                    <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
                     <view class="f_user_box">
-                        <text class="f_name_txt">楼利英</text>
+                        <text class="f_name_txt">{{authorInfo.nickName}}</text>
                         <text class="f_date_txt">2018年4月11日</text>
                     </view>
                 </view>
             </view>
         </view>
     </block>
-    
-    <view class="empty_box"></view>
 
 </view>
 
-
-<view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-</view>
-<template is="fixed-bar" data="{{page:'index'}}" />
+<!-- <template is="fixed-bar" data="{{page:'index'}}" /> -->
