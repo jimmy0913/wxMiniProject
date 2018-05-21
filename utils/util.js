@@ -1,34 +1,6 @@
 import Promise from './bluebird';
 var Util = {};
-/**
- * 封封微信的的request
- */
-Util.request = function(url, data = {}, method = "GET") {
-    let head = "application/json";
-    if (method === "POST") {
-        head = "application/x-www-form-urlencoded"
-    }
-    return new Promise(function(resolve, reject) {
-        wx.request({
-            url: url,
-            data: data,
-            method: method,
-            header: {
-                'Content-Type': head
-            },
-            success: function(res) {
-                // console.log("success");
-                if (res.statusCode == 200) {
-                    resolve(res.data);
-                }
-            },
-            fail: function(err) {
-                reject(err)
-                // console.log("failed")
-            }
-        });
-    });
-}
+
 
 Util.showWXToast = function(title = "", duration = 3000, hideDuration = 6000, showMask = false, icon = "") {
     wx.showToast({
@@ -76,6 +48,36 @@ Util.getCurrentPageUrlWithArgs = function() {
     }
     urlWithArgs = urlWithArgs.substring(0, urlWithArgs.length-1);
     return urlWithArgs;
+}
+
+/**
+ * 封封微信的的request
+ */
+Util.request = function(url, data = {}, method = "GET") {
+    let head = "application/json";
+    if (method === "POST") {
+        head = "application/x-www-form-urlencoded"
+    }
+    return new Promise(function(resolve, reject) {
+        wx.request({
+            url: url,
+            data: data,
+            method: method,
+            header: {
+                'Content-Type': head
+            },
+            success: function(res) {
+                // console.log("success");
+                if (res.statusCode == 200) {
+                    resolve(res.data);
+                }
+            },
+            fail: function(err) {
+                reject(err)
+                // console.log("failed")
+            }
+        });
+    });
 }
 
 Util.objectToString = function(obj) {

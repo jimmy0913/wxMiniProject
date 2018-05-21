@@ -8,16 +8,26 @@ Page({
         authorInfo: {},
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         token:null,
+        bannerArr:[],
+        indexList:[], // 首页图文列表
+        key_words:'',//搜索关键字
+        now_page:1, //当前页
+        follow_now_page:1,//关注列表当前页
+        indexFollowList:[],
     },
     tabHandle: function(e) {
         this.tabIndex = e.currentTarget.dataset.idx;
 
+        if(this.tabIndex == 1){
+            this.getIndexFollowList();
+        }
+
         this.setData({
             tabIndex: this.tabIndex
         })
-
-
     },
+
+
     onLoad: function() {
         let _this = this;
         _this.setData({
@@ -27,8 +37,109 @@ Page({
         _this.bindGetUserInfo(function(){
             let token = _this.data.token;
             wx.setStorageSync('token', token);
-            console.log('222222222:', token);
         });
+
+
+        this.getBannerImg();
+        this.getIndexDetail();
+    },
+
+    // 获取轮播图
+    getBannerImg:function(){
+
+        let _this =  this;
+
+        wx.request({
+            url: 'https://img.xiarikui08.com/api/index/ad_img',
+            method: 'POST',
+            data: {},
+            header: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            success: function(ret) {
+                if (ret.data.code == 200) {
+                    
+                    _this.setData({
+                        bannerArr:ret.data.data,
+                    })
+                } else {
+                    wx.showToast({
+                        title: ret.data.msg,
+                        icon: 'none',
+                        duration: 2000
+                    })
+                }
+            },
+            error: function(ret) {
+                console.log(ret);
+            }
+        })
+    },
+
+    // 获取推荐列表
+    getIndexDetail:function(){
+        let _this =  this;
+
+        wx.request({
+            url: 'https://img.xiarikui08.com/api/index/index',
+            method: 'POST',
+            data: {},
+            header: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            success: function(ret) {
+                if (ret.data.code == 200) {
+                    _this.setData({
+                        indexList:ret.data.data.list,
+                    })
+                } else {
+                    wx.showToast({
+                        title: ret.data.msg,
+                        icon: 'none',
+                        duration: 2000
+                    })
+                }
+            },
+            error: function(ret) {
+                console.log(ret);
+            }
+        })
+
+    },
+
+    //获取关注列表
+    getIndexFollowList : function(){
+        let _this =  this;
+
+        wx.request({
+            url: 'https://img.xiarikui08.com/api/index/follow_index',
+            method: 'POST',
+            data: {
+                now_page: _this.data.follow_now_page,
+                token: _this.data.token,
+            },
+            header: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            success: function(ret) {
+                if (ret.data.code == 200) {
+                    console.log(ret.data);
+
+                    _this.setData({
+                        indexFollowList:ret.data.data.list,
+                    })
+                } else {
+                    wx.showToast({
+                        title: ret.data.msg,
+                        icon: 'none',
+                        duration: 2000
+                    })
+                }
+            },
+            error: function(ret) {
+                console.log(ret);
+            }
+        })
     },
 
     onLaunch: function() {
@@ -88,14 +199,14 @@ Page({
                                             }
                                         },
                                         error: function(ret) {
-                                            console.log(ret);
+                                            // console.log(ret);
                                         }
                                     })
 
 
                                 },
                                 fail: function(res) {
-                                    console.log(res);
+                                    // console.log(res);
                                 }
 
 

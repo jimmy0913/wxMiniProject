@@ -11,12 +11,13 @@
     </view>
     <block wx:if="{{tabIndex==0}}">
         <swiper class="swiper_box" autoplay="true" indicator-dots="true" indicator-active-color="#FFFFFF">
-            <swiper-item>
-                <image src="/images/banner.png" class="slide-image" mode="aspectFit" />
-            </swiper-item>
-            <swiper-item>
-                <image src="/images/banner.png" class="slide-image" mode="aspectFit" />
-            </swiper-item>
+
+            <block wx:for="{{bannerArr}}" wx:key="{{item.ad_id}}">
+                <swiper-item>
+                    <image src="{{item.img}}" class="slide-image" mode="aspectFit" />
+                </swiper-item>
+            </block>
+
         </swiper>
         <view class="index_content">
             <!-- 搜索 -->
@@ -28,93 +29,78 @@
                 </view>
             </navigator>
 
-            <!-- 图文列表 -->
+        
             <!-- 需要使用 button 来授权登录 -->
             <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
             <view wx:else>请升级微信版本</view>
 
+            
 
-            <navigator url="/pages/index-detail/index-detail" open-type ="navigate" hover-class="none">
+            <!-- 图文列表 -->
+            <block wx:for="{{ indexList }}" wx:key="">
+                <navigator url="/pages/index-detail/index-detail" open-type ="navigate" hover-class="none">
 
-                <view class="info_main_box">
-                    <image src="/images/summer.jpg"></image>
-                    <view class="info_desc_box">
-                        <text class="info_txt">小学篱笆旁的蒲公英，是记忆里有味道的风景，午睡操场传来蝉的声音，多少年后也还是很好听。一起长大的约定，那样清晰，打过勾的我相信，说好要一起旅行，是你如今，唯一坚持的任性。。。小学篱笆旁的蒲公英，是记忆里有味道的风景，午睡操场传来蝉的声音，多少年后也还是很好听。</text>
-                        <view class="info_footer_box">
-                            <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
-                            <view class="user_info_box">
-                                <text class="name_txt">{{authorInfo.nickName}}</text>
-                                <text class="date_txt">2018年4月11日</text>
-                            </view>
-                            <view class="count_box">
-                                <view class="count_info_content">
-                                    <image src="/images/icon_s_thumb.png"></image>
-                                    <text>1.1W</text>
+                    <view class="info_main_box">
+                        <image src="{{ item.img }}"></image>
+                        <view class="info_desc_box">
+                            <text class="info_txt">{{ item.img_desc }}</text>
+                            <view class="info_footer_box">
+                                <image src="{{item.head_img}}" mode="aspectFit"></image>
+                                <view class="user_info_box">
+                                    <text class="name_txt">{{item.nick_name}}</text>
+                                    <text class="date_txt">{{ item.add_time }}</text>
                                 </view>
-                                <view class="count_info_content">
-                                    <image src="/images/icon_share.png"></image>
-                                    <text>100</text>
-                                </view>
-                                <view class="count_info_content">
-                                    <image src="/images/icon_comment2.png"></image>
-                                    <text>100</text>
+                                <view class="count_box">
+                                    <view class="count_info_content">
+                                        <image src="/images/icon_s_thumb.png"></image>
+                                        <text>{{ item.like_num }}</text>
+                                    </view>
+                                    <view class="count_info_content">
+                                        <image src="/images/icon_share.png"></image>
+                                        <text>100</text>
+                                    </view>
+                                    <view class="count_info_content">
+                                        <image src="/images/icon_comment2.png"></image>
+                                        <text>{{ item.comment_num }}</text>
+                                    </view>
                                 </view>
                             </view>
                         </view>
                     </view>
-                </view>
 
-            </navigator>
+                </navigator>
+
+            </block>
 
         </view>
     </block>
+
+
     <block wx:else>
-        <view class="follow_list_container">
-            <view class="follow_list">
-                <image src="/images/summer.jpg" mode="aspectFill"></image>
-                <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
-                <view class="f_count_box">
-                    <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
-                    <view class="f_user_box">
-                        <text class="f_name_txt">{{authorInfo.nickName}}</text>
-                        <text class="f_date_txt">2018年4月11日</text>
+
+        <block wx:if="{{ indexFollowList.length>0 }}">
+            <view class="follow_list_container">
+
+                <view class="follow_list" wx:for="{{ indexFollowList }}" wx:key="">
+                    <image src="{{ item.image }}" mode="aspectFill"></image>
+                    <text class="f_info_txt">{{ item.desc }}</text>
+                    <view class="f_count_box">
+                        <image src="{{ item.head_img }}" mode="aspectFit"></image>
+                        <view class="f_user_box">
+                            <text class="f_name_txt">{{ item.nick_name }}</text>
+                            <text class="f_date_txt">2018年4月11日</text>
+                        </view>
                     </view>
                 </view>
+            </view>    
+        </block>
+
+        <block wx:else>
+            <view class="no-data">
+                <text>您没有关注任何用户</text>
             </view>
-            <view class="follow_list">
-                <image src="/images/summer.jpg" mode="aspectFill"></image>
-                <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
-                <view class="f_count_box">
-                    <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
-                    <view class="f_user_box">
-                        <text class="f_name_txt">{{authorInfo.nickName}}</text>
-                        <text class="f_date_txt">2018年4月11日</text>
-                    </view>
-                </view>
-            </view>
-            <view class="follow_list">
-                <image src="/images/summer.jpg" mode="aspectFill"></image>
-                <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
-                <view class="f_count_box">
-                    <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
-                    <view class="f_user_box">
-                        <text class="f_name_txt">{{authorInfo.nickName}}</text>
-                        <text class="f_date_txt">2018年4月11日</text>
-                    </view>
-                </view>
-            </view>
-            <view class="follow_list">
-                <image src="/images/summer.jpg" mode="aspectFill"></image>
-                <text class="f_info_txt">你住的巷子里，我租了一间公寓，为了与你不期而遇。。。</text>
-                <view class="f_count_box">
-                    <image src="{{authorInfo.avatarUrl}}" mode="aspectFit"></image>
-                    <view class="f_user_box">
-                        <text class="f_name_txt">{{authorInfo.nickName}}</text>
-                        <text class="f_date_txt">2018年4月11日</text>
-                    </view>
-                </view>
-            </view>
-        </view>
+        </block>
+
     </block>
 
 </view>
