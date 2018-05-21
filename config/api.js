@@ -24,7 +24,12 @@ var config = {
     my: host + 'api/user/index',
     // 我的关注列表
     myFollow: host + 'api/user/my_follow',
-    //
+    // 我的评论列表
+    myComment: host + 'api/user/my_comment',
+    // 我的点赞:
+    myLiked: host + 'api/user/my_like',
+    // 我的收藏
+    myCollect: host + 'api/user/my_collect',
     wxLoginUrl: `https://mgo.${domain}.com/wxAppLogin/wxLogin`,
     // 首页接口
     indexUrl: `https://mgo.${domain}.com/taolibao/index.htm`

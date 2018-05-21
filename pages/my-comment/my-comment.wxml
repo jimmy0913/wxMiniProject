@@ -1,15 +1,13 @@
-<!-- <import src="../../components/fixed-bar/fixed-bar.wxml" /> -->
-
 <view class="fixed-page">
     <view class="fixed-cont-body">
-
+        <block  wx:if="{{myData.list.length > 0}}">
         <view class="cr-list">
-            <view class="cr-item">
+            <view class="cr-item" wx:for="{{myData.list}}" wx:for-index="idx" wx:for-item="item">
                 <navigator>
-                    <image src="http://pic2.sc.chinaz.com/files/pic/pic9/201804/wpic472.jpg" class="img-box"></image>
+                    <image src="{{item.img}}" class="img-box"></image>
                     <view class="detail-box">
                         <view class="description">
-                            <text>图片简介图片简介图片简介，图片简介图片简介图片简介图片简介，图片简介，图片简介图片简介图片简介图片简介，图片简介图片简介图片简介图片简介图片简介，图片简介图片简介图片简介图片简介</text>
+                            <text>{{item.desc}}</text>
                         </view>
 
                         <!-- 评论 -->
@@ -19,7 +17,7 @@
                                 <text class="date">2018年4月17日</text>
                             </view>
                             <view class="context">
-                                <text>这里是我的评论内容，欢迎随便写,这里是我的评论内容，欢迎随便写这里是我的评论内容，欢迎随便写,这里是我的评论内容，欢迎随便写</text>
+                                <text>{{item.content}}</text>
                             </view>
                         </view>
                     </view>
@@ -27,7 +25,12 @@
                 </navigator>
             </view>
         </view>
+        </block>
+         <block wx:else>
+            <view class="no-data">
+                <text>您还没有评论信息</text>
+            </view>
+        </block>
 
     </view>
-    <!-- <template is="fixed-bar" data="{{page:'my'}}" /> -->
 </view>

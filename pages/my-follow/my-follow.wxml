@@ -1,5 +1,3 @@
-<!-- <import src="../../components/fixed-bar/fixed-bar.wxml" /> -->
-
 <view class="fixed-page">
     <view class="fixed-cont-body">
         <block  wx:if="{{myData.list.length > 0}}">
@@ -30,5 +28,4 @@
 
 
     </view>
-    <!-- <template is="fixed-bar" data="{{page:'my'}}" /> -->
 </view>

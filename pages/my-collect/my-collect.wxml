@@ -2,21 +2,21 @@
 
 <view class="fixed-page">
     <view class="fixed-cont-body">
-
+        <block  wx:if="{{myData.list.length > 0}}">
         <view class="cr-list">
-            <view class="cr-item">
+            <view class="cr-item" wx:for="{{myData.list}}" wx:for-index="idx" wx:for-item="item">
                 <navigator>
                     <view class="star"></view>
-                    <image src="http://pic2.sc.chinaz.com/files/pic/pic9/201804/wpic472.jpg" class="img-box"></image>
+                    <image src="{{item.img}}" class="img-box"></image>
                     <view class="detail-box">
                         <view class="description">
-                            <text>图片简介图片简介图片简介，图片简介图片简介图片简介图片简介，图片简介，图片简介图片简介图片简介图片简介，图片简介图片简介图片简介图片简介图片简介，图片简介图片简介图片简介图片简介</text>
+                            <text>{{item.desc}}</text>
                         </view>
                         <!-- 作者信息 及转发等 -->
                         <view class="author-box">
-                            <image src="{{authorInfo.avatarUrl}}" class="author-img"></image>
+                            <image src="{{item.head_pic}}" class="author-img"></image>
                             <view class="author-name">
-                                <view><text class="name">{{authorInfo.nickName}}</text></view>
+                                <view><text class="name">{{item.nickname}}</text></view>
                                 <view><text>2018年4月17</text></view>
                             </view>
                             <view class="author-act">
@@ -30,14 +30,20 @@
                         </view>
                     </view>
                     <!-- 底部操作 -->
-                    <view class="item-botact">
+                    <!--<view class="item-botact">
                         <view class="botact">删除</view>
                         <view class="botact">浏览</view>
                         <view class="botact">编辑</view>
-                    </view>
+                    </view>-->
                 </navigator>
             </view>
         </view>
+        </block>
+        <block wx:else>
+            <view class="no-data">
+                <text>您还没有收藏信息</text>
+            </view>
+        </block>
 
     </view>
     <!-- <template is="fixed-bar" data="{{page:'my'}}" /> -->
