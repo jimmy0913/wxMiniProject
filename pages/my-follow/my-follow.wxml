@@ -1,7 +1,7 @@
 <view class="fixed-page">
     <view class="fixed-cont-body">
         <block  wx:if="{{myData.list.length > 0}}">
-            <view class="follow-list">
+            <view class="follow-list" userid="{{item.user_id}}">
                 <navigator wx:for="{{myData.list}}" wx:for-index="idx" wx:for-item="item">
                     <view class="follow-item" useId="{{item.user_id}}">
                         <image class="author-img" src="{{item.head_pic}}"></image>

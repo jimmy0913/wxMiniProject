@@ -4,7 +4,7 @@
         <view class="cr-list">
             <view class="cr-item" wx:for="{{myData.list}}" wx:for-index="idx" wx:for-item="item">
                 <navigator>
-                    <image src="{{img.item}}" class="img-box"></image>
+                    <image src="{{item.img}}" class="img-box"></image>
                     <view class="detail-box">
                         <view class="description">
                             <text>{{item.desc}}</text>
@@ -13,7 +13,7 @@
                         <!-- 点了赞 -->
                         <view class="like">
                             <text>我点了个赞</text>
-                            <view class="icon-like"></view>
+                            <view class="icon-like" socialId="{{item.social_id}}"></view>
                         </view>
 
                     </view>

@@ -12,7 +12,7 @@ Page({
         authorInfo: getApp().globalData.userInfo
       });
       // console.log(getApp().globalData.userInfo);
-      let url = Config.myFollow,
+      let url = Config.myLiked,
           token = wx.getStorageSync('token');
       Util.request(url, {token: token}, 'POST').then((res) => {
         if (res.code === 200) {

@@ -12,7 +12,7 @@ Page({
         authorInfo: getApp().globalData.userInfo
       });
       // console.log(getApp().globalData.userInfo);
-      let url = Config.myFollow,
+      let url = Config.myCollect,
           token = wx.getStorageSync('token');
       Util.request(url, {token: token}, 'POST').then((res) => {
         if (res.code === 200) {
@@ -20,7 +20,7 @@ Page({
           _this.setData({
             myData: res.data
           });
-          console.log('33333333333333:', res.data);
+          console.log('myCollection 33333333:', res.data);
         }
       }, (err) => {
 

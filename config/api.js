@@ -30,6 +30,8 @@ var config = {
     myLiked: host + 'api/user/my_like',
     // 我的收藏
     myCollect: host + 'api/user/my_collect',
+    // 我的创建
+    myCreated: host + 'api/user/my_social',
     wxLoginUrl: `https://mgo.${domain}.com/wxAppLogin/wxLogin`,
     // 首页接口
     indexUrl: `https://mgo.${domain}.com/taolibao/index.htm`

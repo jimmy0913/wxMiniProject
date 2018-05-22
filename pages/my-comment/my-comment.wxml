@@ -14,7 +14,7 @@
                         <view class="comment">
                             <view class="top">
                                 <text class="label">我的评论</text>
-                                <text class="date">2018年4月17日</text>
+                                <text class="date">{{item.add_time}}</text>
                             </view>
                             <view class="context">
                                 <text>{{item.content}}</text>

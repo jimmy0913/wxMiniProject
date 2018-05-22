@@ -35,7 +35,8 @@ Page({
             authorInfo: getApp().globalData.userInfo
         });
         _this.bindGetUserInfo(function(){
-            let token = _this.data.token;
+            // myaaamylet token = _this.data.token;
+            let token = '8891fc56a232c7e95634e9a9c21a78b2';
             wx.setStorageSync('token', token);
         });
 
