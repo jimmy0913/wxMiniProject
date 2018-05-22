@@ -35,8 +35,8 @@ Page({
             authorInfo: getApp().globalData.userInfo
         });
         _this.bindGetUserInfo(function(){
-            // myaaamylet token = _this.data.token;
-            let token = '8891fc56a232c7e95634e9a9c21a78b2';
+            let token = _this.data.token;
+            // let token = '8891fc56a232c7e95634e9a9c21a78b2';
             wx.setStorageSync('token', token);
         });
 
@@ -59,7 +59,7 @@ Page({
             },
             success: function(ret) {
                 if (ret.data.code == 200) {
-                    
+
                     _this.setData({
                         bannerArr:ret.data.data,
                     })
